@@ -4,6 +4,7 @@
   "description": "study",
   "main": "main.js",
   "dependencies": {
+    "main.js": "0.0.1",
     "pickr-widget": "^0.3.2",
     "pug": "^2.0.3"
   },

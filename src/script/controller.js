@@ -1,16 +1,15 @@
-import '../../node_modules/pickr-widget/dist/pickr.min.css';
-import Pickr from '../../node_modules/pickr-widget/dist/pickr.min.js';  // Javascript
-const bgpickr = Pickr.create({
+import '../style/pickr.min.css';
+import Pickr from '../script/pickr.min.js';
+console.log("loaded Picker");
+
+var bgpickr = new Pickr({
     el: '.bg-picker',
 
     components: {
-
-        // Main components
         preview: true,
         opacity: true,
         hue: true,
 
-        // Input / output Options
         interaction: {
             hex: true,
             rgba: true,
@@ -19,15 +18,22 @@ const bgpickr = Pickr.create({
             clear: true,
             save: true
         },
-
+	},
         onChange(hsva) {
-			// var bg = document.getElementById('background')
-			// bg.style.backgroundColor = hsva.toHEX();
-			document.body.style.backgroundColor = hsva.toHEX();
+			var bg = document.getElementById('background')
+			bg.style.backgroundColor = hsva.toHEX();
+			// document.body.style.backgroundColor = hsva.toHEX();
+			console.log(hsva);
+			save();
+   		},
+   		onSave(hsva){
+   			console.log(hsva);
    		}
-    }
+    
 });
-const itempickr = Pickr.create({
+
+
+var itempickr = new Pickr({
     el: '.item-picker',
 
     components: {
@@ -46,14 +52,15 @@ const itempickr = Pickr.create({
             clear: true,
             save: true
         },
+    },
 
         onChange(hsva) {
-			// if(document.getElementsByClassName('val'))
-			// {
-			// document.getElementsByClassName('val').style.color = hsva.toHEX();
-			// }
-
+        	var vals = document.getElementsByClassName('val');
+			if(vals)
+			{
+				for(var i=0 ; i<vals.length ;i++)
+				vals[i].style.backgroundColor = hsva.toHEX();
+			}
    		}
-    }
 });
 
