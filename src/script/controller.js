@@ -4,6 +4,8 @@ console.log("loaded Picker");
 
 var bgpickr = new Pickr({
     el: '.bg-picker',
+    default: '#abd4ad',
+    showAlways: true,
 
     components: {
         preview: true,
@@ -14,18 +16,19 @@ var bgpickr = new Pickr({
             hex: true,
             rgba: true,
             hsva: true,
+            cmyk: true,
             input: true,
-            clear: true,
-            save: true
+            save:true,
         },
 	},
         onChange(hsva) {
 			var bg = document.getElementById('background')
 			bg.style.backgroundColor = hsva.toHEX();
-			// document.body.style.backgroundColor = hsva.toHEX();
-			console.log(hsva);
-			save();
+
+            var bgbutton = document.getElementsByClassName('pcr-button')
+            bgbutton[0].style.backgroundColor = hsva.toHEX();
    		},
+
    		onSave(hsva){
    			console.log(hsva);
    		}
@@ -35,22 +38,22 @@ var bgpickr = new Pickr({
 
 var itempickr = new Pickr({
     el: '.item-picker',
+    default: '#42445A',
+    showAlways: true,
+
 
     components: {
-
-        // Main components
         preview: true,
         opacity: true,
         hue: true,
 
-        // Input / output Options
         interaction: {
             hex: true,
             rgba: true,
-            hsva: true,            
+            hsva: true, 
+            cmyk: true,           
             input: true,
-            clear: true,
-            save: true
+            save: true,
         },
     },
 
@@ -61,6 +64,7 @@ var itempickr = new Pickr({
 				for(var i=0 ; i<vals.length ;i++)
 				vals[i].style.backgroundColor = hsva.toHEX();
 			}
+            var bgbutton = document.getElementsByClassName('pcr-button')
+            bgbutton[1].style.backgroundColor = hsva.toHEX();
    		}
 });
-
