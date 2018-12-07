@@ -8,4 +8,4 @@ var t;function e(t){return(e="function"==typeof Symbol&&"symbol"==typeof Symbol.
 },{"../style/pickr.min.css":"tTeS","../script/pickr.min.js":"hbES"}],"Tj2m":[function(require,module,exports) {
 "use strict";require("../style/main.sass"),require("./controller.js");
 },{"../style/main.sass":"tTeS","./controller.js":"nueb"}]},{},["Tj2m"], null)
-//# sourceMappingURL=main.1ce38290.map
+//# sourceMappingURL=main.08881a38.map
