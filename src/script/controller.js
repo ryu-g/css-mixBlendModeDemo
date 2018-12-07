@@ -26,7 +26,7 @@ var bgpickr = new Pickr({
 			bg.style.backgroundColor = hsva.toHEX();
 
             var bgbutton = document.getElementsByClassName('pcr-button')
-            bgbutton[0].style.backgroundColor = hsva.toHEX();
+            bgbutton[1].style.backgroundColor = hsva.toHEX();
    		},
 
    		onSave(hsva){
@@ -65,6 +65,6 @@ var itempickr = new Pickr({
 				vals[i].style.backgroundColor = hsva.toHEX();
 			}
             var bgbutton = document.getElementsByClassName('pcr-button')
-            bgbutton[1].style.backgroundColor = hsva.toHEX();
+            bgbutton[0].style.backgroundColor = hsva.toHEX();
    		}
 });
