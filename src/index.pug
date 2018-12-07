@@ -5,8 +5,9 @@ title mix-blend-mode-demo
 link(rel="icon" type="image/png", href="./favicon.png")
 
 body
-	section.topView
-		h1 mix-blend-mode demoo
+	header
+		.header.val
+			h1 mix-blend-demo
 	section.mainView
 		.result#background
 			.table
@@ -52,5 +53,11 @@ body
 			.itemController
 				p ▼上に乗るものの色を選択 / pick item-color
 				div.item-picker
+	section.kansya
+		h2 参考にさせていただいたもの / special respect
+				
+		a.button(href="https://simonwep.github.io/pickr/") https://simonwep.github.io/pickr/
+
+		a.button(href="https://github.com/Simonwep/pickr") https://github.com/Simonwep/pickr
 
 script(src="./script/main.js")
