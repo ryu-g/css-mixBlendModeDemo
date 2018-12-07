@@ -22,8 +22,10 @@ var bgpickr = new Pickr({
         },
 	},
         onChange(hsva) {
-			var bg = document.getElementById('background')
-			bg.style.backgroundColor = hsva.toHEX();
+			var bg = document.getElementsByClassName('changeBackground')
+			for(var i=0 ; i<bg.length ; i++){
+                bg[i].style.backgroundColor = hsva.toHEX();
+            }
 
             var bgbutton = document.getElementsByClassName('pcr-button')
             bgbutton[1].style.backgroundColor = hsva.toHEX();
