@@ -61,12 +61,18 @@ var itempickr = new Pickr({
 
         onChange(hsva) {
         	var vals = document.getElementsByClassName('val');
+            var texts = document.getElementsByClassName('text');
 			if(vals)
 			{
 				for(var i=0 ; i<vals.length ;i++)
 				vals[i].style.backgroundColor = hsva.toHEX();
 			}
+            if(texts){
+                for(var i=0 ; i<texts.length ;i++)
+                texts[i].style.cssText = "color:"+hsva.toHEX();
+            }
             var bgbutton = document.getElementsByClassName('pcr-button')
             bgbutton[0].style.backgroundColor = hsva.toHEX();
+            
    		}
 });
