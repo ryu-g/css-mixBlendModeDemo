@@ -3,8 +3,8 @@ meta(lang="ja")
 meta(charset="UTF-8")
 title mix-blend-mode-demo
 link(rel="icon" type="image/png", href="./favicon.png")
-
-body
+meta(name="viewport" content="width=device-width,initial-scale=1")
+body.changeBackground
 	header
 		.header.changeBackground
 			h1 mix-blend-demo
@@ -52,6 +52,14 @@ body
 			.bgController
 				p ▼背景の色を選択 / pick background-color
 				div.bg-picker
+
+	section.description
+		h2 このページは何？
+		p cssのmix-blend-modeの全プロパティを背景色・コンテンツ色に一括で指定して結果を確認できるページです。
+		p カラーピッカーを動かして背景色・コンテンツ色を変更してみて、どの色にどの効果を乗せたらほしい結果になるのか試してみてください。
+		
+		p ※pcからの閲覧を推奨します
+		p ※操作によっては眼球に強い負担がかかる可能性があります。気分を悪くした場合は速やかに閲覧・利用を中止してください。
 
 	section.kansya
 		h2 参考にさせていただいたもの / special respect
